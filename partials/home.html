@@ -1,0 +1,50 @@
+﻿<table class="table table-responsive main-table">
+    <tr>
+        <td class="nospace zindex">
+            <table class="table table-bordered  text-center">
+                <tr>
+                    <td class="panel-heading display">
+                        <h3>{{CompanyName}}</h3>
+                    </td>
+                </tr>
+                <tr ng-repeat="item in ProductItems">
+                    <td>{{item.ItemName}}</td>
+                </tr>
+            </table>
+        </td>
+        <td ng-repeat="product in Products" class="nospace zindex">
+            <table class="table table-bordered  zindex text-center product-table">
+                <tr>
+                    <th ng-style="myStyle={'background-color':'{{product.ProductBackgroundColor}}'}" class="text-center display">
+                        <img ng-src="/Content/images/{{product.Image}}" class="img-responsive img-thumbnail logo">
+                        <h2 class="h3" style="color:white">{{product.Name}}</h2>
+                        <h3 class="h5" style="color:white">
+                            <span>{{product.ProductPrice | number:2}}</span>
+                            <span>{{product.CurrencySymbol}} / {{product.PriceTimePeriod}}</span>
+                        </h3>
+                    </th>
+                </tr>
+                <tr ng-repeat="prodItem in product.ProductItems">
+                    <td ng-if="prodItem.Amount != 0">{{prodItem.Amount}}</td>
+                    <td ng-if="prodItem.Amount == 0"><span class="glyphicon glyphicon-minus"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="col-lg-6 center">
+                                <div class="input-group">
+                                    <input type="number" value="{{product.ProductQuantity}}" ng-model="product.ProductQuantity" min="1" class="form-control input-sm" size="2" max="{{product.MaxPurchasableAmount}}">
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="select(product)" class="btn btn-primary" style="padding: 4px 12px;">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

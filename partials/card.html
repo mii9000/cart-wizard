@@ -1,0 +1,49 @@
+﻿<form class="form-horizontal well">
+    <div class="form-group">
+        <label class="col-xs-offset-2 col-sm-2 control-label">Card Number</label>
+        <div class="col-sm-4">
+            <input ng-model="payment.CardNumber" type="text" maxlength="20" name="card-number" autocomplete="off" class="required form-control input-lg" placeholder="Your Card Number" />
+        </div>
+    </div>
+    <div class="form-group ">
+        <label class="col-xs-offset-2 col-sm-2 control-label">CVC</label>
+        <div class="col-sm-4">
+            <input ng-model="payment.CVC" type="text" maxlength="4" name="card-cvc" autocomplete="off" class="required form-control input-lg" placeholder="Your Card Verification Code" />
+        </div>
+    </div>
+    <div class="form-group ">
+        <label class="col-xs-offset-2 col-sm-2 control-label">Expiration</label>
+        <div class="col-sm-2">
+            <label class="col-sm-1 control-label">Month</label>
+            <select ng-init="payment.Month = payment.Month || '01'" ng-model="payment.Month" class="required form-control input-lg">
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+        </div>
+        <div class="col-sm-2">
+            <label class="col-sm-1 control-label">Year</label>
+            <select ng-init="payment.Year = payment.Year || '2014'" ng-model="payment.Year" name="card-expiry-year" class="required form-control input-lg">
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-4 text-center">
+            <button ng-disabled="IsPaying" ng-click="Pay(payment)" type="button" name="submit-button" class="btn btn-primary btn-lg">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                Pay Now
+            </button>
+        </div>
+    </div>
+</form>

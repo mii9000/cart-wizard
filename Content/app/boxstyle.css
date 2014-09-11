@@ -1,0 +1,8 @@
+﻿.product-table:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.5);
+    -ms-transform: scale(1.05,1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+}

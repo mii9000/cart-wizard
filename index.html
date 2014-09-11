@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cart Wizard</title>
+    <link href="Content/lib/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/app/boxstyle.css" rel="stylesheet" />
+    <link href="Content/app/wizard.css" rel="stylesheet" />
+    <link href="Content/app/animation.css" rel="stylesheet" />
+</head>
+<body ng-app="cart-wizard">
+    <div id="container-view" class="container">
+        <div id="nested-views" ui-view>
+
+        </div>
+    </div>
+
+    <hr />
+
+    <pre class="container well" ng-controller="DataController">
+        {{data | json}}
+    </pre>
+    
+    <script src="Scripts/libs/angular.min.js"></script>
+    <script src="Scripts/libs/angular-ui-router.min.js"></script>
+    <script src="Scripts/libs/angular-ui/ui-bootstrap.min.js"></script>
+    <script src="Scripts/libs/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/libs/angular-animate.min.js"></script>
+    <script src="Scripts/app/app.js"></script>
+    <script src="Scripts/app/controller.js"></script>
+</body>
+</html>

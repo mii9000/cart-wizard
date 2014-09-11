@@ -1,0 +1,26 @@
+﻿<div class="col-xs-offset-4 col-sm-4 text-center panel-default well">
+    <form class="form-horizontal panel-body" ng-submit="Login(loginForm.$valid)" name="loginForm" novalidate="novalidate">
+        <div class="form-group">
+            <span class="input-group-addon" ng-class="{'has-error' : loginForm.email.$invalid && loginForm.email.$dirty }">
+                <span class="glyphicon glyphicon-envelope"></span>
+                <input ng-model="user.email" required type="email" name="email" class="form-control input-lg" placeholder="Email">
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="input-group-addon" ng-class="{'has-error' : loginForm.password.$invalid && loginForm.password.$dirty }">
+                <span class="glyphicon glyphicon-lock"></span>
+                <input ng-model="user.password" ng-minlength="8" required type="password" name="password" class="form-control input-lg" placeholder="Password">
+            </span>
+        </div>
+        <div class="form-group">
+            <button ng-disabled="loginForm.$invalid" type="submit" class="btn btn-primary input-lg">
+                <span class="glyphicon glyphicon-log-in"></span>
+                Login
+            </button>
+        </div>
+    </form>
+    <div ng-show="loginForm.email.$error.email && loginForm.email.$dirty" class="alert alert-danger">Invalid Email</div>
+    <div ng-show="loginForm.email.$error.required && loginForm.email.$dirty" class="alert alert-danger">Email Cannot Be Empty</div>
+    <div ng-show="loginForm.password.$error.minlength && loginForm.password.$dirty" class="alert alert-danger">Password Minimum 8 Characters</div>
+    <div ng-show="loginForm.password.$error.required && loginForm.password.$dirty" class="alert alert-danger">Password Cannot Be Empty</div>
+</div>

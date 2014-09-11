@@ -1,0 +1,45 @@
+﻿{
+  "CompanyName": "John Doe Inc.",
+  "Products": [
+    {
+      "ProductId": 5022,
+      "Name": "Chevy 1978",
+      "ProductPrice": 12000,
+      "PriceTimePeriod": "Month",
+      "CurrencySymbol": "€",
+      "ProductBackgroundColor": "#366092",
+      "MaxPurchasableAmount": 10,
+	  "Image": "black.png",
+      "ProductItems": [
+        {
+          "ProductItemName": "Custom Accessories",
+          "Amount": 9
+        },
+        {
+          "ProductItemName": "Servicing",
+          "Amount": 10
+        }
+      ]
+    },
+    {
+      "ProductId": 5023,
+      "Name": "Aston Martin V8",
+      "ProductPrice": 1734.23,
+      "PriceTimePeriod": "Month",
+      "CurrencySymbol": "€",
+      "ProductBackgroundColor": "#17365d",
+      "MaxPurchasableAmount": 1,
+      "Image": "yellow.png",
+	  "ProductItems": [
+        {
+          "ProductItemName": "Custom Accessories",
+          "Amount": 5
+        },
+        {
+          "ProductItemName": "Servicing",
+          "Amount": 0
+        }
+      ]
+    }
+  ]
+}
